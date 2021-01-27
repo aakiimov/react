@@ -14,17 +14,6 @@ import Router from './router';
  * @constructor
  */
 export default function App(): React.ReactElement {
-  React.useEffect(() => {
-    bridge.subscribe(({ detail: { type, data }}) => {
-      if (type === 'VKWebAppUpdateConfig') {
-        const schemeAttribute = document.createAttribute('scheme');
-        //@ts-ignore
-        schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
-        document.body.attributes.setNamedItem(schemeAttribute);
-      }
-    });
-  }, []);
-
   return (
     <FirebaseDatabaseProvider firebase={firebase} {...config}>
       <Provider store={store}>
