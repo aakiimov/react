@@ -1,0 +1,39 @@
+.catalog-item {
+  width: calc(100% - 48px);
+  margin: auto;
+  justify-content: space-between;
+  column-gap: 24px;
+  grid-template-columns: min-content min-content;
+  align-items: center;
+  grid-auto-flow: column;
+  display: grid;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: #fff;
+  text-decoration: none;
+  font: inherit;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: inherit;
+
+  .Avatar__img {
+    object-fit: cover;
+  }
+
+  &:last-child {
+    margin-bottom: 48px;
+  }
+}
+
+.catalog-item__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-item__avatar {
+  max-width: 120px;
+}
+
+.catalog-item__value {
+  white-space: nowrap;
+}

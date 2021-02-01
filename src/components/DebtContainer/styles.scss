@@ -1,0 +1,47 @@
+.debt-container {
+  padding: 0 32px;
+  row-gap: 16px;
+  display: grid;
+}
+
+.debt-container__header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+
+  .Button {
+    padding: 0 8px;
+  }
+}
+
+.debt-container__title {
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: bold;
+
+  button {
+    font: inherit;
+    color: var(--accent);
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.carrousel-1 {
+  display: flex;
+  padding: 0 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.carrousel-1-cell {
+  padding: 0 12px;
+  width: 100%;
+}
+
+.dashboard-card__subtitle {
+  max-width: 80px;
+}
