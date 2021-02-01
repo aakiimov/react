@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { AppRoot, Epic, Tabbar, TabbarItem, View } from '@vkontakte/vkui';
 import { Icon28BookOutline, Icon28ServicesOutline, Icon28UserCircleOutline } from '@vkontakte/icons';
 import { fetchAccessToken } from './store/actions/user';
-import { CatalogView, AppView } from './views';
+import { CatalogView, AppView, ProfileView } from './views';
 import { IRouterProps, IStory, TabRoute } from './types';
 
 /**
