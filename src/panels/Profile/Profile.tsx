@@ -18,7 +18,7 @@ export default function ProfilePanel(props: IPanelProps): React.ReactElement {
       <PanelHeader fixed={false}>Профиль</PanelHeader>
       <ContentFix>
         <DashboardCard 
-          title={`${firebase.database().ref(`${getCurrentUserId()}`).toString()}`}
+          title={`${firebase.database().ref(`${getCurrentUserId()}`).once('value')}`}
           subtitle="Ранг: основатель"
         />
       </ContentFix>
