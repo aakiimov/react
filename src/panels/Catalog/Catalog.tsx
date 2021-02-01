@@ -2,8 +2,6 @@ import React from 'react';
 import { Panel, PanelHeader } from '@vkontakte/vkui';
 import IPanelProps from "../../types/panelProps";
 import { CatalogItem, ContentFix } from "../../components";
-import { getCurrentUserId } from "./utils";
-import firebase from "./firebase";
 
 /**
  * The catalog panel.
