@@ -49,6 +49,7 @@ function Router(props: IRouterProps): React.ReactElement {
       }>
         <CatalogView id={TabRoute.Catalog} activePanel={TabRoute.Catalog} />
         <AppView id={TabRoute.App} activePanel={TabRoute.App} />
+        <ProfileView id={TabRoute.Profile} activePanel={TabRoute.Profile} />
       </Epic>
     </AppRoot>
   );
