@@ -1,5 +1,6 @@
 import React from 'react';
 import { Panel, PanelHeader } from '@vkontakte/vkui';
+import { Icon28UserCircleOutline } from '@vkontakte/icons';
 import { ContentFix } from '../../components';
 import { DashboardCard } from '../../components/Dashboard/modules'
 import IPanelProps from "../../types/panelProps";
@@ -15,7 +16,7 @@ import { getCurrentUserId } from "../../utils";
 export default function ProfilePanel(props: IPanelProps): React.ReactElement {
   return (
     <Panel id={props.id}>
-      <PanelHeader fixed={false}>Профиль</PanelHeader>
+      <PanelHeader left={<Icon28UserCircleOutline />} fixed={false}>Профиль</PanelHeader>
       <ContentFix>
         <DashboardCard 
           title={`${firebase.database().ref(`${getCurrentUserId()}`).once('value')}`}
