@@ -71,23 +71,23 @@ checkBrowsers(paths.appPath, isInteractive)
   .then(
     ({ stats, previousFileSizes, warnings }) => {
       if (warnings.length) {
-        console.log(chalk.yellow('Compiled with warnings.\n'));
+        console.log(chalk.yellow('[ CORE ] Build end with warningss\n'));
         console.log(warnings.join('\n\n'));
         console.log(
-          '\nSearch for the ' +
+          '\n[ CORE ] Search for the ' +
             chalk.underline(chalk.yellow('keywords')) +
             ' to learn more about each warning.'
         );
         console.log(
-          'To ignore, add ' +
+          '[ CORE ] To ignore, add ' +
             chalk.cyan('// eslint-disable-next-line') +
             ' to the line before.\n'
         );
       } else {
-        console.log(chalk.green('Compiled successfully.\n'));
+        console.log(chalk.green('[ CORE ] Building end successfully.\n'));
       }
 
-      console.log('File sizes after gzip:\n');
+      console.log('[ CORE ] File sizes after gzip:\n');
       printFileSizesAfterBuild(
         stats,
         previousFileSizes,
@@ -114,12 +114,12 @@ checkBrowsers(paths.appPath, isInteractive)
       if (tscCompileOnError) {
         console.log(
           chalk.yellow(
-            'Compiled with the following type errors (you may want to check these before deploying your app):\n'
+            '[ CORE ] Building with the following type errors (you may want to check these before deploying your app):\n'
           )
         );
         printBuildError(err);
       } else {
-        console.log(chalk.red('Failed to compile.\n'));
+        console.log(chalk.red('[ CORE ] Building error.\n'));
         printBuildError(err);
         process.exit(1);
       }
@@ -134,7 +134,7 @@ checkBrowsers(paths.appPath, isInteractive)
 
 // Create the production build and print the deployment instructions.
 function build(previousFileSizes) {
-  console.log('Creating an optimized production build...');
+  console.log('[ CORE ] Building..');
 
   const compiler = webpack(config);
   return new Promise((resolve, reject) => {
@@ -150,7 +150,7 @@ function build(previousFileSizes) {
         // Add additional information for postcss errors
         if (Object.prototype.hasOwnProperty.call(err, 'postcssNode')) {
           errMessage +=
-            '\nCompileError: Begins at CSS selector ' +
+            '\n[ CORE ] CompileError: Begins at CSS selector ' +
             err['postcssNode'].selector;
         }
 
